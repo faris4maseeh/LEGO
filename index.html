@@ -94,6 +94,11 @@
             content: "↑"; 
             font-size: 30px; 
         }
+
+        /* Add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -102,8 +107,8 @@
 <nav>
     <a href="#history">History</a>
     <a href="#videos">Videos</a>
-    <a href="#links">Links</a> <!-- Changed 'Contact' to 'Links' -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAh5rIhmyvc54tbjCyQSskgHEjS3kWeLv8kzYGF7JonMXe1g/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Rate My Website</a> <!-- Added Rate My Website link -->
+    <a href="#links">Links</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAh5rIhmyvc54tbjCyQSskgHEjS3kWeLv8kzYGF7JonMXe1g/viewform?vc=0&c=0&w=1&flr=0" target="_blank">Rate My Website</a>
 </nav>
 
 <h1>The history of LEGO</h1>
@@ -111,7 +116,7 @@
 
 <!-- History Section -->
 <div id="history">
-    <p>We all love LEGO, which is suitable for everyone, no matter their age. But most of us don't know the true story of LEGO. In this website, I will tell you the amazing history of the world's most popular toy.</p>
+    <p>We all love LEGO, it is suitable for everyone, no matter their age. But most of us don't know the true story of LEGO. In this website, I will tell you the amazing history of the world's most popular toy.</p>
     <br>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/640px-LEGO_logo.svg.png" alt="Lego" width="400" height="400">
     <br>
@@ -175,11 +180,15 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// When the user clicks on the button, scroll to the top of the document smoothly
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
 </script>
 
+</body>
+</html>
 </body>
